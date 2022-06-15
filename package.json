@@ -1,0 +1,37 @@
+{
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "Simple crud-api",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && mocha --require ts-node/register tests/index.spec.ts",
+    "start:dev": "nodemon index.ts",
+    "start:prod": "tsc && node index.js",
+    "start:multi": "npx ts-node cluster.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mudreuski/crud-api.git"
+  },
+  "author": "Mudreuski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mudreuski/crud-api/issues"
+  },
+  "homepage": "https://github.com/Mudreuski/crud-api#readme",
+  "dependencies": {
+    "@types/node": "^17.0.41",
+    "@types/uuid": "^8.3.4",
+    "dotenv": "^16.0.1",
+    "ts-node": "^10.8.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.16",
+    "typescript": "^4.7.3"
+  }
+}
