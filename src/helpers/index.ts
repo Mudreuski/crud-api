@@ -19,8 +19,8 @@ export function getData(req: http.IncomingMessage): Promise<User> {
 }
 
 export function isCorrectBody(body: User): boolean {
-    const { name, age, hobbies } = body;
-    const checkName = Boolean(name && typeof name === 'string');
+    const { username, age, hobbies } = body;
+    const checkName = Boolean(username && typeof username === 'string');
     const checkAge = Boolean(age && typeof age === 'number');
     const checkHobbies = Boolean(Array.isArray(hobbies) && hobbies.every(hobby => typeof hobby === 'string'));
 
